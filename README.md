@@ -1,16 +1,15 @@
-# Template
+# Memory Card
 
 [Live Demo](#)<br/><br/>
 [![The Odin Project](https://img.shields.io/badge/The%20Odin%20Project-A9792B?logo=theodinproject&logoColor=fff)](#)
 
 ## Overview
 
-This is a project from [The Odin Project](https://theodinproject.com): [Project: ](#).
+This is a project from [The Odin Project](https://theodinproject.com): [Project: Memory Card](https://www.theodinproject.com/lessons/node-path-react-new-memory-card). This project asks us to create a [Memory Card Game](https://www.helpfulgames.com/subjects/brain-training/memory.html), where we pull cards wrapped with information from the [Pokemon API](https://pokeapi.co/).
 
 ## Learning Points
 
--
--
+- Understanding the concepts of useEffect, to run processes outside of the React component, like fetching data from an API
 
 ## Tech Stack
 
@@ -40,7 +39,7 @@ Getting started on running the webpack server to your localhost, localhost:8080
 1. Cloning the repository
 
 ```sh
-git clone git@github.com:JohnFerrancol/XX.git
+git clone git@github.com:JohnFerrancol/memory-card.git
 ```
 
 2. Installing npm packages
