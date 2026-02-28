@@ -110,14 +110,7 @@ function App() {
       </div>
 
       {isModalVisible ? (
-        <Modal
-          text={
-            currentScore === numberOfPokemon
-              ? 'You Won! Try a higher difficulty ;)'
-              : 'Oops! You clicked a same pokemon! You lost!'
-          }
-          handleTryAgain={handleTryAgain}
-        />
+        <Modal haveWon={currentScore === numberOfPokemon} handleTryAgain={handleTryAgain} />
       ) : (
         <>
           {' '}
