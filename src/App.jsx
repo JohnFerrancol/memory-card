@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Card from './components/Card';
 import generateRandomNumbers from './utils/generateRandomNumbers';
 import shuffleArray from './utils/shuffleArray';
+import pokeBall from './assets/poke-ball.png';
 import './styles/App.css';
 
 function App() {
@@ -66,10 +67,18 @@ function App() {
   };
 
   return (
-    <div className="grid grid-rows-2 justify-center">
-      <h1 className="text-3xl font-bold">Current score: {currentScore}</h1>
-      <h1 className="text-3xl font-bold">Best score: {bestScore}</h1>
-      <div className="flex gap-2">
+    <div className="text-white h-screen background-img font-press-start-2p flex flex-col justify-start items-center ">
+      <div className="flex items-center gap-3">
+        <img src={pokeBall} width={60} />
+        <h1 className="text-3xl">Poke Memory</h1>
+      </div>
+
+      <h2 className="text-2xl">Current score: {currentScore}</h2>
+      <h2 className="text-2xl">Best score: {bestScore}</h2>
+
+      <p className="mt-4 mb-3">Pokemon Memory Game. Do not click the same pokemon more than once</p>
+      <h3 className="text-xl mr-100 mt-5">Pokemon</h3>
+      <div className="grid grid-cols-5 gap-3 m-9 mr-100">
         {pokemonList.map((pokemon) => (
           <Card key={pokemon.id} {...pokemon} handleClick={handleClick} />
         ))}

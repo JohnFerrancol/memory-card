@@ -1,1 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import 'tailwindcss';
+
+@theme {
+  --font-press-start-2p: 'Press Start 2P', system-ui;
+}
+
+.background-img {
+  background-image: url('../assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+}
