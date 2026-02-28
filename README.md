@@ -59,5 +59,6 @@ npm run dev
 ## Roadmap
 
 - [x] Populate the card information of the memory cards, the names and images of the Pokémon, by pulling information from PokeAPI
-- [ ] Create game logic - By updating the current score and resetting it if the user clicks on the same card
-- [ ] Creating tabs to increase the difficulty of the game
+- [x] Create game logic - By updating the current score and resetting it if the user clicks on the same card
+- [x] Creating tabs to increase the difficulty of the game
+- [ ] Adding modals to display to the user whether they lost or won
