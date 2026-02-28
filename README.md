@@ -5,7 +5,7 @@
 
 ## Overview
 
-This is a project from [The Odin Project](https://theodinproject.com): [Project: Memory Card](https://www.theodinproject.com/lessons/node-path-react-new-memory-card). This project asks us to create a [Memory Card Game](https://www.helpfulgames.com/subjects/brain-training/memory.html), where we pull cards wrapped with information from the [Pokemon API](https://pokeapi.co/).
+This is a project from [The Odin Project](https://theodinproject.com): [Project: Memory Card](https://www.theodinproject.com/lessons/node-path-react-new-memory-card). This project asks us to create a [Memory Card Game](https://heldersrvio.github.io/memory-card-game/), where we pull cards wrapped with information from the [Pokemon API](https://pokeapi.co/).
 
 ## Learning Points
 
@@ -58,5 +58,5 @@ npm run dev
 
 ## Roadmap
 
-- [ ] XXX
-- [ ] XXX
+- [ ] Populate the card information of the memory cards, the names and images of the Pokémon, by pulling information from PokeAPI
+- [ ] Create game logic
