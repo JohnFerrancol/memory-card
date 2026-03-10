@@ -28,12 +28,23 @@ function App() {
     const fetchRandomPokemon = async () => {
       const randomIntsArray = generateRandomNumbers(numberOfPokemon);
 
-      const requests = randomIntsArray.map((id) =>
-        fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then((result) => result.json())
+      const responses = await Promise.all(
+        randomIntsArray.map(async (id) => {
+          try {
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+
+            if (!response.ok) {
+              throw new Error('Failed to fetch Pokémon');
+            }
+
+            return await response.json();
+          } catch (error) {
+            console.log(error);
+          }
+        })
       );
 
-      const results = await Promise.all(requests);
-      return results;
+      return responses;
     };
 
     // Populate the pokemon data to a populate pokemon list and set the pokemonList state variable
