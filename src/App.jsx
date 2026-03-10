@@ -37,7 +37,13 @@ function App() {
               throw new Error('Failed to fetch Pokémon');
             }
 
-            return await response.json();
+            const pokemonInformation = await response.json();
+
+            return {
+              id: pokemonInformation.id,
+              name: pokemonInformation.name,
+              spriteUrl: pokemonInformation.sprites.front_default,
+            };
           } catch (error) {
             console.log(error);
           }
@@ -48,16 +54,7 @@ function App() {
     };
 
     // Populate the pokemon data to a populate pokemon list and set the pokemonList state variable
-    fetchRandomPokemon().then((pokemonData) => {
-      const populatedPokemonList = pokemonData.map((pokemon) => {
-        return {
-          id: pokemon.id,
-          name: pokemon.name,
-          spriteUrl: pokemon.sprites.front_default,
-        };
-      });
-      setPokemonList(populatedPokemonList);
-    });
+    fetchRandomPokemon().then((pokemonResponses) => setPokemonList(pokemonResponses));
   }, [numberOfPokemon]);
 
   const resetGame = () => {
